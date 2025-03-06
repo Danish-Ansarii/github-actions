@@ -1,0 +1,15 @@
+# File: .github/workflows/first-workflow.yml
+name: First Workflow
+
+on: push  # Triggers on every push
+
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest  # Runs on Ubuntu VM
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Clones your repo
+      
+      - name: Print a message
+        run: echo "Hello, GitHub Actions!"
